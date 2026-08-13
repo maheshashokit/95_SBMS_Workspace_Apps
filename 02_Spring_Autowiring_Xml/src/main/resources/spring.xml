@@ -1,0 +1,28 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <bean id="user" class="com.ashokit.beans.User" autowire="byType">
+       <property name="userName" value="Mahesh"/>
+       <property name="password" value="Mahesh@123"/>
+       <!--<property name="address" ref="address"/>-->
+   </bean>
+
+    <bean id="address" class="com.ashokit.beans.Address" primary="true">
+        <property name="doorNo" value="1-2-3"/>
+        <property name="streetName" value="Ameerpet"/>
+        <property name="city" value="Hyderabad"/>
+    </bean>
+
+    <bean id="address1" class="com.ashokit.beans.Address">
+        <property name="doorNo" value="1-2-3"/>
+        <property name="streetName" value="XYZ"/>
+        <property name="city" value="Chennai"/>
+    </bean>
+
+    <bean id="stu" class="com.ashokit.beans.Student" autowire="constructor">
+        <constructor-arg name="name" value="Mahesh"/>
+        <constructor-arg name="course" value="SpringBoot and Microservices"/>
+    </bean>
+ </beans>

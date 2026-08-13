@@ -1,0 +1,30 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+      <!-- configuring the Welcome Class as Spring Bean-->
+    <bean id="welcome" class="com.ashokit.beans.Welcome">
+        <!--setting value for message property using setter method of class-->
+        <property name="message" value="Welcome To AshokIT"/>
+    </bean>
+
+      <!-- configuring the User class as spring bean-->
+    <bean id="user" class="com.ashokit.beans.User" autowire="">
+        <!--setting values for userName,password using setter method of class-->
+        <property name="userName" value="Mahesh"/>
+        <property name="password" value="Mahesh@123"/>
+    </bean>
+
+      <!-- configuring predefined java class as spring bean-->
+    <bean id="date" class="java.util.Date"/>
+
+      <!-- configuring predefined Java class as spring bean -->
+    <bean id="dbsource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/86_springbootms_db"/>
+        <property name="username" value="root"/>
+        <property name="password" value="root"/>
+    </bean>
+
+ </beans>

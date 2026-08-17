@@ -1,0 +1,34 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- configuring the User Class as Spring Bean -->
+    <bean id="user" class="com.ashokit.beans.User">
+        <property name="username" value="AIT123"/>
+        <property name="password" value="AIT12345"/>
+    </bean>
+
+    <!-- configuring the Address Class as Spring Bean -->
+    <bean id="address1" class="com.ashokit.beans.Address">
+        <property name="doorNo" value="1-2-3"/>
+        <property name="streetName" value="ABC"/>
+        <property name="city" value="Hyderabad"/>
+    </bean>
+
+    <bean id="address2" class="com.ashokit.beans.Address">
+        <property name="doorNo" value="11-22-33"/>
+        <property name="streetName" value="ABCDE"/>
+        <property name="city" value="Chennai"/>
+    </bean>
+
+    <!-- configuring the Demo Class as spring bean -->
+    <bean id="demo1" class="com.ashokit.beans.Demo">
+        <property name="message" value="Welcome To AshokIT"/>
+    </bean>
+
+    <context:annotation-config/>
+</beans>

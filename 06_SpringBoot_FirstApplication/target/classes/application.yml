@@ -1,0 +1,10 @@
+com:
+  ashokit:
+    id: 12345
+    name: Mahesh1
+    salary: 52000
+    address:
+      doorNo: 12-22-32
+      streetName: Ameerpet1
+      cityName: Hyderabad
+    colors: black,Yellow,Green,Blue,Orange
